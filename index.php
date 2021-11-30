@@ -36,25 +36,7 @@
         </div>
     </nav>
 
-    <div class="container">
-        <?php if(isset($_GET['status'])): ?>
-            <p>
-                <?php
-                    if($_GET['status'] == 'sukses') {
-                        echo "<div class=\"alert alert-success mt-4\" role=\"alert\">";
-                        echo "Pendaftaran siswa baru berhasil!";
-                        echo "</div>";
-                    } else {
-                        echo "<div class=\"alert alert-danger mt-4\" role=\"alert\">";
-                        echo "Pendaftaran gagal";
-                        echo "</div>";
-                    }
-                ?>
-            </p>
-        <?php endif; ?>
-    </div>
-
-    <div class="bg-light p-5 rounded-lg m-3">
+    <div class="p-5 rounded-lg m-3">
         <h1 class="display-4">Welcome to Coder School</h1>
         <p class="lead">Sekolah yang mencetak programmer-programmer handal dengan program mentoring bersama para ahli di bidangnya.</p>
         <hr class="my-4">

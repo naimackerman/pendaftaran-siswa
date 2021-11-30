@@ -19,10 +19,10 @@
         // apakah query simpan berhasil?
         if ( $query ) {
             // kalau berhasil alihkan ke halaman index.php dengan status=sukses
-            header('Location: index.php?status=sukses');
+            header('Location: list-siswa.php?status=sukses');
         } else {
             // kalau gagal alihkan ke halaman indek.php dengan status=gagal
-            header('Location: index.php?status=gagal');
+            header('Location: list-siswa.php?status=gagal');
         }
 
 

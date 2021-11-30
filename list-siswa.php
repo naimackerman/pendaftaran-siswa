@@ -38,6 +38,24 @@
         </div>
     </nav>
 
+    <div class="container">
+        <?php if(isset($_GET['status'])): ?>
+            <p>
+                <?php
+                    if($_GET['status'] == 'sukses') {
+                        echo "<div class=\"alert alert-success mt-4\" role=\"alert\">";
+                        echo "Pendaftaran siswa baru berhasil!";
+                        echo "</div>";
+                    } else {
+                        echo "<div class=\"alert alert-danger mt-4\" role=\"alert\">";
+                        echo "Pendaftaran gagal";
+                        echo "</div>";
+                    }
+                ?>
+            </p>
+        <?php endif; ?>
+    </div>
+
     <div class="container mt-4">
         <p>
             <a href="./form-daftar.php"><i class="fa-solid fa-circle-plus text-success"></i> Tambah Baru</a>
