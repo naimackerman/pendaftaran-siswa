@@ -68,6 +68,7 @@
             <thead class="table-success">
                 <tr>
                     <th scope="col">No</th>
+                    <th scope="col">Foto</th>
                     <th scope="col">Nama</th>
                     <th scope="col">Alamat</th>
                     <th scope="col">Jenis Kelamin</th>
@@ -80,11 +81,13 @@
                 <?php
                     $sql = "SELECT * FROM calon_siswa";
                     $query = mysqli_query($db, $sql);
+                    $no = 1;
 
                     while($siswa = mysqli_fetch_array($query)) {
                         echo "<tr>";
 
-                        echo "<td>".$siswa['id']."</td>";
+                        echo "<td>".$no."</td>";
+                        echo "<td><img src='images/".$siswa['foto']."' width='100' height='100'></td>";
                         echo "<td>".$siswa['nama']."</td>";
                         echo "<td>".$siswa['alamat']."</td>";
                         echo "<td>".$siswa['jenis_kelamin']."</td>";
@@ -118,6 +121,7 @@
                             </div>
                         </div>
                         ";
+                        $no = $no + 1;
                     }
                 ?>
             </tbody>

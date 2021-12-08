@@ -40,7 +40,7 @@
 
     <div class="container mt-4">
         <div class="row justify-content-center">
-            <form class="col-6" action="proses-edit.php" method="POST">
+            <form class="col-6" action="proses-edit.php" method="POST" enctype="multipart/form-data">
 
                 <fieldset>
 
@@ -86,6 +86,10 @@
                 <div class="row mt-3">
                     <label for="sekolah_asal" class="form-label">Sekolah Asal: </label>
                     <input type="text" name="sekolah_asal" placeholder="Nama Sekolah" class="form-control" value="<?php echo $siswa['sekolah_asal'] ?>" required />
+                </div>
+                <div class="row mt-3">
+                    <label for="foto" class="form-label">Foto: </label>
+                    <input type="file" name="foto" placeholder="Foto" class="form-control" />
                 </div>
                 <div class="row mt-3 d-grid gap-2">
                     <button class="btn btn-primary" type="submit" name="simpan">Simpan</button>
